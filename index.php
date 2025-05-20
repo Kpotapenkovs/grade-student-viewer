@@ -1,5 +1,8 @@
 <?php
 require_once 'config.php';
+include 'role_navbar.php';
+include 'navbar.php';
+
 
 try {
     $stmt = $pdo->query("
@@ -25,20 +28,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Studentu vērtējumi</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid #999;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #eee;
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h2>Studentu vērtējumu saraksts</h2>
